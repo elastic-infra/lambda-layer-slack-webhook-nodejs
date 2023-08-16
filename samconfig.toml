@@ -1,0 +1,15 @@
+version = 0.1
+
+[default.validate.parameters]
+lint = true
+
+[default.deploy.parameters]
+confirm_changeset = false
+s3_prefix = "lambda-layer-slack-webhook-nodejs"
+
+[default.package.parameters]
+s3_prefix = "lambda-layer-slack-webhook-nodejs"
+output_template_file = "packaged.yaml"
+
+[default.publish.parameters]
+template = "packaged.yaml"

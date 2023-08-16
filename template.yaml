@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  SlackWebhookLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: slack-webhook-nodejs
+      Description: '@slack/webhook AWS Lambda layer'
+      ContentUri: layer/
+      CompatibleRuntimes:
+        - nodejs14.x
+        - nodejs16.x
+        - nodejs18.x
+      RetentionPolicy: Retain
+      LicenseInfo: MIT
+    Metadata:
+      BuildMethod: makefile
+
+Outputs:
+  LayerVersion:
+    Description: The ARN of Lambda Layer
+    Value: !Ref SlackWebhookLayer
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: lambda-layer-slack-webhook-nodejs
+    Description: '@slack/webhook AWS Lambda layer'
+    Author: elastic-infra
+    SpdxLicenseId: MIT
+    LicenseUrl: LICENSE
+    ReadmeUrl: README.md
+    Labels:
+      - lambda
+      - layer
+      - nodejs
+    HomePageUrl: https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs
+    SemanticVersion: 1.0.0
+    SourceCodeUrl: https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs

@@ -1,0 +1,10 @@
+{
+  "name": "slack-webhook-nodejs",
+  "version": "1.0.0",
+  "description": "@slack/webhook Lambda Layer",
+  "repository": "https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/webhook": "^6.1.0"
+  }
+}
