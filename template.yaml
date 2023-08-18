@@ -1,11 +1,26 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 
+Parameters:
+  LayerName:
+    Description: Lambda layer name
+    Default: slack-webhook-nodejs
+    Type: String
+  AllowPublic:
+    Description: Whether to share your Lambda layer to all AWS accounts
+    Default: false
+    Type: String
+    AllowedValues: [true, false]
+
+Conditions:
+  ShouldPublic:
+    !Equals [!Ref AllowPublic, true]
+
 Resources:
   SlackWebhookLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      LayerName: slack-webhook-nodejs
+      LayerName: !Ref LayerName
       Description: '@slack/webhook AWS Lambda layer'
       ContentUri: layer/
       CompatibleRuntimes:
@@ -16,6 +31,15 @@ Resources:
       LicenseInfo: MIT
     Metadata:
       BuildMethod: makefile
+  SlackWebhookLayerPermission:
+    Type: AWS::Lambda::LayerVersionPermission
+    Condition: ShouldPublic
+    Properties:
+      Action: lambda:GetLayerVersion
+      LayerVersionArn: !Ref SlackWebhookLayer
+      Principal: '*'
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
 
 Outputs:
   LayerVersion:
