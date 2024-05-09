@@ -3,6 +3,9 @@ version = 0.1
 [default.validate.parameters]
 lint = true
 
+[default.build.parameters]
+use_container = true
+
 [default.deploy.parameters]
 confirm_changeset = false
 s3_prefix = "lambda-layer-slack-webhook-nodejs"
