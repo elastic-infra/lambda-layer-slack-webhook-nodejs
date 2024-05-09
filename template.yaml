@@ -27,6 +27,7 @@ Resources:
         - nodejs14.x
         - nodejs16.x
         - nodejs18.x
+        - nodejs20.x
       RetentionPolicy: Retain
       LicenseInfo: MIT
     Metadata:

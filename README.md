@@ -9,6 +9,7 @@
 * nodejs14.x
 * nodejs16.x
 * nodejs18.x
+* nodejs20.x
 
 ### Version of @slack/webhook
 
