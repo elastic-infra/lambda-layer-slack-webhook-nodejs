@@ -60,5 +60,5 @@ Metadata:
       - layer
       - nodejs
     HomePageUrl: https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs
-    SemanticVersion: 1.1.0
+    SemanticVersion: 1.2.0
     SourceCodeUrl: https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs
