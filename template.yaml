@@ -24,8 +24,6 @@ Resources:
       Description: '@slack/webhook AWS Lambda layer'
       ContentUri: layer/
       CompatibleRuntimes:
-        - nodejs14.x
-        - nodejs16.x
         - nodejs18.x
         - nodejs20.x
       RetentionPolicy: Retain
