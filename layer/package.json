@@ -5,7 +5,7 @@
   "repository": "https://github.com/elastic-infra/lambda-layer-slack-webhook-nodejs",
   "license": "MIT",
   "scripts": {
-    "version": "sed -i \"s/SemanticVersion: .*/SemanticVersion: $npm_package_version/\" ../template.yaml && git add ../template.yaml package.json && git commit -m \"bump up v$npm_package_version\""
+    "version": "sed -i \"s/SemanticVersion: .*/SemanticVersion: $npm_package_version/\" ../template.yaml && git add ../template.yaml package.json package-lock.json && git commit -m \"bump up v$npm_package_version\""
   },
   "dependencies": {
     "@slack/webhook": "^8.0.2"
