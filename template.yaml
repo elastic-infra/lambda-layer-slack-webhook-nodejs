@@ -24,8 +24,8 @@ Resources:
       Description: '@slack/webhook AWS Lambda layer'
       ContentUri: layer/
       CompatibleRuntimes:
-        - nodejs18.x
-        - nodejs20.x
+        - nodejs22.x
+        - nodejs24.x
       RetentionPolicy: Retain
       LicenseInfo: MIT
     Metadata:

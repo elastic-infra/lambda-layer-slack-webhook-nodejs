@@ -8,6 +8,6 @@
     "version": "sed -i \"s/SemanticVersion: .*/SemanticVersion: $npm_package_version/\" ../template.yaml && git add ../template.yaml package.json && git commit -m \"bump up v$npm_package_version\""
   },
   "dependencies": {
-    "@slack/webhook": "^7.0.2"
+    "@slack/webhook": "^8.0.2"
   }
 }
