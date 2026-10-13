@@ -6,9 +6,9 @@
 
 ### Supported lambda runtimes
 
-* nodejs18.x
-* nodejs20.x
+* nodejs22.x
+* nodejs24.x
 
 ### Version of @slack/webhook
 
-* 7.0.2
+* 8.0.2
