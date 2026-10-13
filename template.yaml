@@ -29,7 +29,9 @@ Resources:
       RetentionPolicy: Retain
       LicenseInfo: MIT
     Metadata:
-      BuildMethod: makefile
+      BuildMethod: nodejs22.x
+      BuildProperties:
+        UseNpmCi: true
   SlackWebhookLayerPermission:
     Type: AWS::Lambda::LayerVersionPermission
     Condition: ShouldPublic
